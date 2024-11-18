@@ -129,3 +129,210 @@ On instance:
                                     'animations': 'Smooth'},
                   'audio': {'backgroundMusic': True, 'soundEffects': True},
                   'languagesSupported': ['English', 'Spanish', 'French']}}
+2024-11-18 14:55:50,167 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 14:55:50,168 - ProjectInitializer - ERROR - subject_description key not found in subject.json.
+2024-11-18 14:55:50,169 - ProjectInitializer - CRITICAL - Initialization failed: 'subject_description key not found in subject.json.'
+2024-11-18 14:56:49,759 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 14:56:49,760 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 14:56:57,370 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 14:56:57,371 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 14:56:57,372 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 14:56:57,374 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 14:57:01,418 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 14:57:01,419 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 14:57:01,420 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 14:57:01,422 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 14:57:17,802 - ProjectInitializer - ERROR - Error generating OtherValues.json: 'ChatCompletionMessage' object is not subscriptable
+2024-11-18 14:57:17,804 - ProjectInitializer - INFO - State report updated for OtherValues.json: Failed
+2024-11-18 14:57:17,804 - ProjectInitializer - ERROR - Error generating OtherValues.json: cannot access local variable 'raw_content' where it is not associated with a value
+2024-11-18 15:03:08,795 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 15:03:08,796 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:03:15,128 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 15:03:15,129 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 15:03:15,130 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 15:03:15,131 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 15:03:20,834 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 15:03:20,835 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 15:03:20,836 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 15:03:20,837 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 15:03:45,393 - ProjectInitializer - ERROR - Error generating OtherValues.json: 'ChatCompletionMessage' object is not subscriptable
+2024-11-18 15:03:45,395 - ProjectInitializer - INFO - State report updated for OtherValues.json: Failed
+2024-11-18 15:03:45,395 - ProjectInitializer - ERROR - Error generating OtherValues.json: cannot access local variable 'raw_content' where it is not associated with a value
+2024-11-18 15:06:25,277 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 15:06:25,278 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:06:30,488 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 15:06:30,489 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 15:06:30,490 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 15:06:30,491 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 15:06:35,331 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 15:06:35,332 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 15:06:35,333 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 15:06:35,335 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 15:07:02,498 - ProjectInitializer - ERROR - Error generating other_values.json: 'ChatCompletionMessage' object is not subscriptable
+2024-11-18 15:07:02,500 - ProjectInitializer - INFO - State report updated for other_values.json: Failed
+2024-11-18 15:07:02,500 - ProjectInitializer - ERROR - Error generating other_values.json: cannot access local variable 'raw_content' where it is not associated with a value
+2024-11-18 15:09:10,190 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 15:09:10,191 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:09:16,056 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 15:09:16,057 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 15:09:16,058 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 15:09:16,059 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 15:09:21,896 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 15:09:21,897 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 15:09:21,898 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 15:09:21,899 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 15:09:43,200 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 15:09:43,201 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:09:59,587 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 15:09:59,588 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 15:09:59,589 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 15:09:59,590 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 15:10:01,966 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 15:10:01,967 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 15:10:01,968 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 15:10:01,969 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 15:10:09,791 - ProjectInitializer - INFO - Generated other_values.json successfully.
+2024-11-18 15:10:09,792 - ProjectInitializer - INFO - other_values.json validation passed.
+2024-11-18 15:10:09,793 - ProjectInitializer - INFO - Saved other_values.json
+2024-11-18 15:10:09,794 - ProjectInitializer - INFO - State report updated for other_values.json: Success
+2024-11-18 15:12:41,444 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 15:12:41,445 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:12:49,474 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 15:12:49,474 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 15:12:49,476 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 15:12:49,477 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 15:12:51,072 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 15:12:51,073 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 15:12:51,074 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 15:12:51,075 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 15:13:00,595 - ProjectInitializer - INFO - Generated other_values.json successfully.
+2024-11-18 15:13:00,596 - ProjectInitializer - INFO - other_values.json validation passed.
+2024-11-18 15:13:00,597 - ProjectInitializer - INFO - Saved other_values.json
+2024-11-18 15:13:00,598 - ProjectInitializer - INFO - State report updated for other_values.json: Success
+2024-11-18 15:31:42,244 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 15:31:42,245 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:31:48,258 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 15:31:48,259 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 15:31:48,260 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 15:31:48,262 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 15:31:55,225 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 15:31:55,226 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 15:31:55,227 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 15:31:55,229 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 15:31:55,694 - ProjectInitializer - ERROR - Error generating other_values.json: Error code: 400 - {'error': {'message': "Invalid type for 'messages[2].content[0]': expected an object, but got a string instead.", 'type': 'invalid_request_error', 'param': 'messages[2].content[0]', 'code': 'invalid_type'}}
+2024-11-18 15:31:55,696 - ProjectInitializer - INFO - State report updated for other_values.json: Failed
+2024-11-18 15:31:55,696 - ProjectInitializer - ERROR - Error generating other_values.json: cannot access local variable 'raw_content' where it is not associated with a value
+2024-11-18 15:35:45,113 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 15:35:45,114 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:35:51,153 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 15:35:51,154 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 15:35:51,155 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 15:35:51,156 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 15:36:03,359 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 15:36:03,360 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 15:36:03,361 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 15:36:03,363 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 15:36:47,802 - ProjectInitializer - INFO - Generated other_values.json successfully.
+2024-11-18 15:36:47,802 - ProjectInitializer - INFO - other_values.json validation passed.
+2024-11-18 15:36:47,804 - ProjectInitializer - INFO - Saved other_values.json
+2024-11-18 15:36:47,805 - ProjectInitializer - INFO - State report updated for other_values.json: Success
+2024-11-18 15:51:49,576 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 15:51:49,577 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:51:54,824 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 15:51:54,827 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 15:51:54,832 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 15:51:54,840 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 15:51:54,844 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:52:14,822 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 15:52:14,825 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 15:52:14,832 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 15:52:14,841 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 15:52:26,338 - ProjectInitializer - INFO - Generated other_values.json successfully.
+2024-11-18 15:52:26,342 - ProjectInitializer - INFO - other_values.json validation passed.
+2024-11-18 15:52:26,346 - ProjectInitializer - INFO - Saved other_values.json
+2024-11-18 15:52:26,352 - ProjectInitializer - INFO - State report updated for other_values.json: Success
+2024-11-18 15:54:55,663 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 15:54:55,665 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:55:00,843 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 15:55:00,846 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 15:55:00,850 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 15:55:00,858 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 15:55:00,862 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:55:14,475 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 15:55:14,478 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 15:55:14,484 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 15:55:14,491 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 15:55:24,311 - ProjectInitializer - INFO - Generated other_values.json successfully.
+2024-11-18 15:55:24,315 - ProjectInitializer - INFO - other_values.json validation passed.
+2024-11-18 15:55:24,320 - ProjectInitializer - INFO - Saved other_values.json
+2024-11-18 15:55:24,328 - ProjectInitializer - INFO - State report updated for other_values.json: Success
+2024-11-18 15:56:41,096 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 15:56:41,097 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:56:46,547 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 15:56:46,550 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 15:56:46,554 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 15:56:46,560 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 15:56:46,563 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 15:56:55,953 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 15:56:55,956 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 15:56:55,961 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 15:56:55,968 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 15:57:05,681 - ProjectInitializer - INFO - Generated other_values.json successfully.
+2024-11-18 15:57:05,684 - ProjectInitializer - INFO - other_values.json validation passed.
+2024-11-18 15:57:05,689 - ProjectInitializer - INFO - Saved other_values.json
+2024-11-18 15:57:05,696 - ProjectInitializer - INFO - State report updated for other_values.json: Success
+2024-11-18 17:06:22,651 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 17:06:22,652 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 17:06:28,395 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 17:06:28,398 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 17:06:28,402 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 17:06:28,409 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 17:06:28,411 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 17:06:33,101 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 17:06:33,104 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 17:06:33,108 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 17:06:33,116 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 17:06:40,885 - ProjectInitializer - INFO - Generated other_values.json successfully.
+2024-11-18 17:06:40,887 - ProjectInitializer - INFO - other_values.json validation passed.
+2024-11-18 17:06:40,892 - ProjectInitializer - INFO - Saved other_values.json
+2024-11-18 17:06:40,899 - ProjectInitializer - INFO - State report updated for other_values.json: Success
+2024-11-18 17:12:50,809 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 17:12:50,810 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 17:12:54,960 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 17:12:54,962 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 17:12:54,967 - ProjectInitializer - INFO - Saved structure.json
+2024-11-18 17:12:54,986 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 17:12:54,989 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 17:12:58,534 - ProjectInitializer - INFO - Generated models.json successfully.
+2024-11-18 17:12:58,537 - ProjectInitializer - INFO - models.json validation passed.
+2024-11-18 17:12:58,541 - ProjectInitializer - INFO - Saved models.json
+2024-11-18 17:12:58,548 - ProjectInitializer - INFO - State report updated for models.json: Success
+2024-11-18 17:13:08,363 - ProjectInitializer - INFO - Generated other_values.json successfully.
+2024-11-18 17:13:08,365 - ProjectInitializer - INFO - other_values.json validation passed.
+2024-11-18 17:13:08,370 - ProjectInitializer - INFO - Saved other_values.json
+2024-11-18 17:13:08,377 - ProjectInitializer - INFO - State report updated for other_values.json: Success
+2024-11-18 17:30:49,773 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 17:30:49,774 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 17:30:55,991 - ProjectInitializer - ERROR - Error generating structure.json: Illegal trailing comma before end of object: line 5 column 39 (char 93)
+2024-11-18 17:30:55,996 - ProjectInitializer - INFO - State report updated for structure.json: Failed
+2024-11-18 17:30:55,997 - ProjectInitializer - ERROR - Error generating structure.json: Illegal trailing comma before end of object: line 5 column 39 (char 93)
+2024-11-18 17:32:59,880 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 17:32:59,881 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 17:33:04,809 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 17:33:04,811 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 17:33:04,817 - ProjectInitializer - INFO - Saved alignment_files\structure.json
+2024-11-18 17:33:04,822 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 17:33:04,825 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 17:33:57,632 - ProjectInitializer - ERROR - Error generating models.json: Expecting value: line 1 column 1 (char 0)
+2024-11-18 17:33:57,638 - ProjectInitializer - INFO - State report updated for models.json: Failed
+2024-11-18 17:33:57,639 - ProjectInitializer - ERROR - Error generating models.json: Expecting value: line 1 column 1 (char 0)
+2024-11-18 17:37:09,048 - ProjectInitializer - INFO - Starting project initialization
+2024-11-18 17:37:09,049 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 17:37:16,090 - ProjectInitializer - INFO - Generated structure.json successfully.
+2024-11-18 17:37:16,093 - ProjectInitializer - INFO - structure.json validation passed.
+2024-11-18 17:37:16,098 - ProjectInitializer - INFO - Saved alignment_files\structure.json
+2024-11-18 17:37:16,103 - ProjectInitializer - INFO - State report updated for structure.json: Success
+2024-11-18 17:37:16,106 - ProjectInitializer - INFO - Loaded subject description.
+2024-11-18 17:37:48,745 - ProjectInitializer - ERROR - Error generating models.json: Expecting value: line 1 column 1 (char 0)
+2024-11-18 17:37:48,750 - ProjectInitializer - INFO - State report updated for models.json: Failed
+2024-11-18 17:37:48,751 - ProjectInitializer - ERROR - Error generating models.json: Expecting value: line 1 column 1 (char 0)

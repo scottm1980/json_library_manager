@@ -25,25 +25,28 @@ def load_subject(file_path='alignment_files/subject.json'):
     with open(file_path, 'r') as f:
         try:
             subject = json.load(f)
-            if 'subject_description' not in subject:
-                logger.error("subject_description key not found in subject.json.")
-                raise KeyError("subject_description key not found in subject.json.")
+            if 'subject' not in subject:
+                logger.error("subject key not found in subject.json.")
+                raise KeyError("subject key not found in subject.json.")
             logger.info("Loaded subject description.")
-            return subject['subject_description']
+            return subject['subject']
         except json.JSONDecodeError as e:
             logger.error(f"Error decoding {file_path}: {e}")
             raise
 
 def save_json(data, filename):
-    """Save a dictionary as a JSON file."""
-    logger.debug(f"Saving data to {filename}")
+    """Save a dictionary as a JSON file in the alignment_files folder."""
+    folder = Path("alignment_files")
+    folder.mkdir(exist_ok=True)  # Create folder if it doesn't exist
+    file_path = folder / filename
     try:
-        with open(filename, 'w') as f:
+        with open(file_path, 'w') as f:
             json.dump(data, f, indent=4)
-        logger.info(f"Saved {filename}")
+        logger.info(f"Saved {file_path}")
     except Exception as e:
-        logger.error(f"Failed to save {filename}: {e}")
+        logger.error(f"Failed to save {file_path}: {e}")
         raise
+
 
 def extract_json(content):
     """
@@ -65,14 +68,14 @@ def extract_json(content):
     # If no code block, return the content as is
     return content.strip()
 
-def generate_structure(subject_description):
+def generate_structure(subject):
     """Generate structure.json using OpenAI."""
     logger.debug("Generating structure.json using OpenAI")
     prompt = f"""
-Analyze the following game description and provide a JSON structure outlining the key screens, features, and components.
+Analyze the following game description and provide a complete file structure in JSON format. Include the necessary files, directories, and their relationships.
 
 Description:
-{subject_description}
+{subject}
 
 **Do not include any code block delimiters. Provide only the JSON content.**
 """
@@ -80,11 +83,27 @@ Description:
         response = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant for generating game configuration files."},
+                {
+                "role": "system",
+                "content": (
+                    "I am tasked with defining and then mapping out the typical contents of 'app/lib' folder in a Flutter Dart codebase but tailored to precisley reflect a SSoT code base."
+                    " I will begin by visualizing the file structure that represents the app's folder hierarchy and the files within each folder."
+                ),
+                },
+                {
+            "role": "system",
+            "content": (
+                " I will first create an accurate mapping, allowing for and keeping all files in clean 'layers'."
+                " I will translate the file structure into a JSON format that is a full and complete folder hierarchy and the files within each folder."
+                " I will provide an optimized but complete file structure."
+                " I will include these 'baseline' files & folders by default, alongside the files & folders for the specific app requirements:"
+                " 'lib/appLifeCycleBloc(bloc,events,states)', 'lib/authBloc(bloc,events,states)', 'lib/navBloc(bloc,events,states)', 'lib/profileCubit(cubit, states)', 'lib/data', 'lib/services', 'lib/screens', 'lib/widgets', 'lib/helpers', 'lib/utils'."
+                       ),
+                },
                 {"role": "user", "content": prompt}
             ],
-            temperature=0.2,
-            max_tokens=1000
+            temperature=1.35,
+            max_tokens=10000
         )
         raw_content = response.choices[0].message.content.strip()
         cleaned_content = extract_json(raw_content)
@@ -99,23 +118,23 @@ Description:
 def generate_models(structure_json):
     """Generate models.json using OpenAI."""
     logger.debug("Generating models.json using OpenAI")
-    prompt = f"""
-Based on the following app structure, define the necessary data models in JSON format. Include model names and their fields with types.
-
-App Structure:
-{json.dumps(structure_json, indent=4)}
-
-**Do not include any code block delimiters. Provide only the JSON content.**
-"""
+    subject = load_subject()
+    prompt = ("Analyze the subject and structure provided and then define all the required models. I require a model for all code and files across my codebase.")
+          
     try:
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant for generating game configuration files."},
-                {"role": "user", "content": prompt}
+                    { "role": "system", "content": ( "I am tasked with defining and mapping an entire DART 'model' set. This is required to produce a high fidelity app given a 'subject' and the finalized 'file structure'."
+                                                    " I will begin by identifying the files in the 'file structure' that will require a model. I will then analyze the code, their relationships within the application, and define the 'model' required." "" ) }, 
+                    { "role": "system", "content": ( " I will first create an accurate mapping, allowing for and keeping all models in clean 'layers'." 
+                                                    " I will provide an optimized and complete definition of all required 'models'. I will reuse models where possible, such as usermodel serving both profile and auth." " I will always include 'baseline models' by default alongside the app subject-specific models. For instance, usermodel can be considered a baseline model." ) },
+                    {"role": "assistant", "content": f"{subject}"}, 
+                    {"role": "assistant", "content": f"{json.dumps(structure_json, indent=4)}"},
+                    {"role": "user", "content": f"{prompt}"}
             ],
-            temperature=0.2,
-            max_tokens=1000
+            temperature=1.35,
+            max_tokens=5000
         )
         raw_content = response.choices[0].message.content.strip()
         cleaned_content = extract_json(raw_content)
@@ -128,13 +147,13 @@ App Structure:
         raise
 
 def generate_other_values(subject_json, structure_json, models_json):
-    """Generate OtherValues.json using OpenAI."""
-    logger.debug("Generating OtherValues.json using OpenAI")
+    """Generate other_values.json using OpenAI."""
+    logger.debug("Generating other_values.json using OpenAI")
     prompt = f"""
 Based on the following subject, structure, and models, generate a JSON file containing predefined events, states, function signatures, and other reusable values.
 
 Subject:
-{json.dumps({"subject_description": subject_json}, indent=4)}
+{json.dumps({"subject": subject_json}, indent=4)}
 
 Structure:
 {json.dumps(structure_json, indent=4)}
@@ -146,21 +165,69 @@ Models:
 """
     try:
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant for generating game configuration files."},
+                    {
+                    "role": "system",
+                    "content": (
+                        "I am tasked with defining non-model values used throughout a Flutter Dart application."
+                        " I will utilize three different input JSONs: subject, file_structure, and models, to derive these values."
+                    ),
+                },
+                {
+                    "role": "system",
+                    "content": (
+                        "I will create an accurate representation of these non-model values, which include app-wide constants, settings, and reusable parameters."
+                        " I will translate these values into a JSON format that consolidates key information derived from subject, file_structure, and models."
+                        " I will provide an optimized but complete definition of all non-model values."
+                        " These values may include default settings, predefined events, reusable utility constants, app states, and other relevant configurations."
+                    ),
+                },
+                {
+                    "role": "assistant",
+                    "content": 
+                        "event_names"
+                        "state_names"
+                        "function_names"
+                        "inputs_outputs"
+                        "imported_packages"
+                        "imported_classes"
+                        "widget_names"
+                        "variable_names"
+                        "constant_names"
+                        "class_names"
+                        "mixin_names"
+                        "enum_names"
+                        "method_names"
+                        "data_types"
+                        "annotations"
+                        "inherited_classes"
+                        "global_variables"
+                        "final_variables"
+                        "library_names"
+                        "documentation_comments"
+                        "file_names"
+                        "file_locations"
+                        "used_themes"
+                        "event_listeners"
+                        "dependencies"
+                        "route_names"
+                        "color_definitions"
+                        "configuration_files"
+                    
+                },
                 {"role": "user", "content": prompt}
             ],
-            temperature=0.2,
-            max_tokens=1500
+            temperature=1.35,
+            max_tokens=5000
         )
-        raw_content = response.choices[0].message['content'].strip()
+        raw_content = response.choices[0].message.content.strip()
         cleaned_content = extract_json(raw_content)
         other_values = json.loads(cleaned_content)
-        logger.info("Generated OtherValues.json successfully.")
+        logger.info("Generated other_values.json successfully.")
         return other_values
     except Exception as e:
-        logger.error(f"Error generating OtherValues.json: {e}")
+        logger.error(f"Error generating other_values.json: {e}")
         logger.debug(f"Received response: {raw_content}")
         raise
 
@@ -234,11 +301,11 @@ def main():
     try:
         # Load game description
         logger.info("Starting project initialization")
-        subject_description = load_subject()
+        subject = load_subject()
 
         # Generate structure.json
         try:
-            structure = generate_structure(subject_description)
+            structure = generate_structure(subject)
             validate_json(structure, STRUCTURE_SCHEMA, 'structure.json')
             save_json(structure, 'structure.json')
             generate_state_report('structure.json', 'Success', 'structure.json generated and validated successfully.')
@@ -258,15 +325,15 @@ def main():
             logger.error(f"Error generating models.json: {e}")
             sys.exit(1)
 
-        # Generate OtherValues.json
+        # Generate other_values.json
         try:
-            other_values = generate_other_values(subject_description, structure, models)
-            validate_json(other_values, OTHER_VALUES_SCHEMA, 'OtherValues.json')
-            save_json(other_values, 'OtherValues.json')
-            generate_state_report('OtherValues.json', 'Success', 'OtherValues.json generated and validated successfully.')
+            other_values = generate_other_values(subject, structure, models)
+            validate_json(other_values, OTHER_VALUES_SCHEMA, 'other_values.json')
+            save_json(other_values, 'other_values.json')
+            generate_state_report('other_values.json', 'Success', 'other_values.json generated and validated successfully.')
         except Exception as e:
-            generate_state_report('OtherValues.json', 'Failed', str(e))
-            logger.error(f"Error generating OtherValues.json: {e}")
+            generate_state_report('other_values.json', 'Failed', str(e))
+            logger.error(f"Error generating other_values.json: {e}")
             sys.exit(1)
 
     except Exception as e:

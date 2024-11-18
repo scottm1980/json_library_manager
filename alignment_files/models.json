@@ -1,11 +1,12 @@
 {
     "name": "dart_models_collection",
+    "strict": true,
     "schema": {
       "type": "object",
       "properties": {
         "models": {
           "type": "array",
-          "description": "A collection of DART models.",
+          "description": "I will list all the models needed for the subject and their values.",
           "items": {
             "type": "object",
             "properties": {
@@ -67,6 +68,5 @@
         "models"
       ],
       "additionalProperties": false
-    },
-    "strict": true
+    }
   }

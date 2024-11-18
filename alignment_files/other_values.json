@@ -1,0 +1,237 @@
+{
+    "name": "schema_description",
+    "strict": true,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "event_names": {
+          "type": "array",
+          "description": "I want you to create and define all event names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "state_names": {
+          "type": "array",
+          "description": "I want you to create and define all state names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "function_names": {
+          "type": "array",
+          "description": "I want you to create and define all function names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inputs_outputs": {
+          "type": "array",
+          "description": "I want you to create and define input and output specifications.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "imported_packages": {
+          "type": "array",
+          "description": "I want you to define and list imported packages.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "imported_classes": {
+          "type": "array",
+          "description": "I want you to define and list imported classes.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "widget_names": {
+          "type": "array",
+          "description": "I want you to create and define all widget names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "variable_names": {
+          "type": "array",
+          "description": "I want you to create and define all variable names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "constant_names": {
+          "type": "array",
+          "description": "I want you to create and define all constant names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "class_names": {
+          "type": "array",
+          "description": "I want you to create and define all class names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mixin_names": {
+          "type": "array",
+          "description": "I want you to create and define all mixin names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "enum_names": {
+          "type": "array",
+          "description": "I want you to create and define all enum names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "method_names": {
+          "type": "array",
+          "description": "I want you to create and define all method names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "data_types": {
+          "type": "array",
+          "description": "Identify all data types used.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "annotations": {
+          "type": "array",
+          "description": "I want you to define and list annotations used.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inherited_classes": {
+          "type": "array",
+          "description": "I want you to define and list inherited classes.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "global_variables": {
+          "type": "array",
+          "description": "I want you to create and define all global variables.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "final_variables": {
+          "type": "array",
+          "description": "I want you to create and define all final variables.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "library_names": {
+          "type": "array",
+          "description": "I want you to define and list library names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "documentation_comments": {
+          "type": "array",
+          "description": "I want you to create and define all documentation comments.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "file_names": {
+          "type": "array",
+          "description": "I want you to define and list file names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "file_locations": {
+          "type": "array",
+          "description": "Identify file locations.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "used_themes": {
+          "type": "array",
+          "description": "I want you to define and list used themes.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "event_listeners": {
+          "type": "array",
+          "description": "I want you to create and define all event listeners.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dependencies": {
+          "type": "array",
+          "description": "I want you to define and list dependencies.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "route_names": {
+          "type": "array",
+          "description": "I want you to create and define all route names.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "color_definitions": {
+          "type": "array",
+          "description": "I want you to define and list color definitions.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "configuration_files": {
+          "type": "array",
+          "description": "Identify configuration files.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "event_names",
+        "state_names",
+        "function_names",
+        "inputs_outputs",
+        "imported_packages",
+        "imported_classes",
+        "widget_names",
+        "variable_names",
+        "constant_names",
+        "class_names",
+        "mixin_names",
+        "enum_names",
+        "method_names",
+        "data_types",
+        "annotations",
+        "inherited_classes",
+        "global_variables",
+        "final_variables",
+        "library_names",
+        "documentation_comments",
+        "file_names",
+        "file_locations",
+        "used_themes",
+        "event_listeners",
+        "dependencies",
+        "route_names",
+        "color_definitions",
+        "configuration_files"
+      ],
+      "additionalProperties": false
+    }
+  }
+  
