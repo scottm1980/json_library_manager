@@ -1,0 +1,33 @@
+{
+    "gameTitle": "Crossword Adventures",
+    "description": "Solve puzzles to progress through unique storylines in various worlds.",
+    "targetAudience": ["Puzzle enthusiasts", "Casual gamers", "Story-driven players"],
+    "gameMechanics": {
+      "puzzleTypes": ["Crossword", "Word Search", "Trivia"],
+      "hintMechanics": "Limited hints with recharge over time",
+      "scoringSystem": "Points per puzzle with multipliers for speed and accuracy"
+    },
+    "themes": {
+      "default": {
+        "primaryColor": "#000000",
+        "secondaryColor": "#FFFFFF",
+        "fontFamily": "Roboto"
+      },
+      "alternative": {
+        "primaryColor": "#FF5733",
+        "secondaryColor": "#C70039",
+        "fontFamily": "Lobster"
+      }
+    },
+    "monetization": {
+      "ads": "Google Ads displayed on app launch and after every 3 puzzles",
+      "inAppPurchases": {
+        "removeAds": 2.99,
+        "hintPack": {
+          "price": 1.99,
+          "description": "5 additional hints"
+        }
+      }
+    }
+  }
+  

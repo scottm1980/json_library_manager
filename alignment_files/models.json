@@ -1,0 +1,72 @@
+{
+    "name": "dart_models_collection",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "models": {
+          "type": "array",
+          "description": "A collection of DART models.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "model_name": {
+                "type": "string",
+                "description": "The name of the DART model."
+              },
+              "fields": {
+                "type": "array",
+                "description": "A list of fields within the DART model.",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "field_name": {
+                      "type": "string",
+                      "description": "The name of the field."
+                    },
+                    "field_type": {
+                      "type": "string",
+                      "description": "The data type of the field.",
+                      "enum": [
+                        "int",
+                        "double",
+                        "String",
+                        "bool",
+                        "List",
+                        "Map",
+                        "dynamic"
+                      ]
+                    },
+                    "is_nullable": {
+                      "type": "boolean",
+                      "description": "Indicates if the field can be null."
+                    },
+                    "default_value": {
+                      "type": "string",
+                      "description": "The default value of the field if applicable."
+                    }
+                  },
+                  "required": [
+                    "field_name",
+                    "field_type",
+                    "is_nullable",
+                    "default_value"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "model_name",
+              "fields"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "models"
+      ],
+      "additionalProperties": false
+    },
+    "strict": true
+  }
